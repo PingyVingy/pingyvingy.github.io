@@ -11,15 +11,20 @@ SERVERS = {
 }
 DATA_FILE = "data.json"
 
+import platform # Add this to your imports at the top
+
 def get_ping(host):
     try:
-        # Pings the host once. Windows uses -n, Linux/Mac uses -c. 
-        # Adjust '-c' to '-n' if you are running this on a Windows machine.
-        output = subprocess.check_output(['ping', '-c', '1', '-W', '2', host], universal_newlines=True)
+        # Detect OS: 'Windows' or something else (Linux/Mac)
+        param = '-n' if platform.system().lower() == 'windows' else '-c'
+        
+        output = subprocess.check_output(['ping', param, '1', '-w' if platform.system().lower() == 'windows' else '-W', '2', host], universal_newlines=True)
+        
         for line in output.split('\n'):
-            if 'time=' in line:
-                time_ms = line.split('time=')[1].split(' ')[0]
-                return float(time_ms)
+            if 'time=' in line or 'time<' in line: # Windows sometimes says time<1ms
+                # Extract the time in milliseconds
+                time_str = line.split('time=')[1].split('ms')[0] if 'time=' in line else line.split('time<')[1].split('ms')[0]
+                return float(time_str.strip())
     except Exception:
         pass
     return None
