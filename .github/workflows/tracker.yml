@@ -1,0 +1,29 @@
+name: Ping Tracker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Runs every 10 minutes
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
+
+jobs:
+  ping-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run ping script
+        run: python update_ping.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data.json
+          git commit -m "Auto-update ping data" || exit 0
+          git push
