@@ -2,27 +2,24 @@ import subprocess
 import json
 import os
 import time
+import platform
 from datetime import datetime
 
 SERVERS = {
-    "Google": "8.8.8.8",
+    "Google": "google.com",
     "YouTube": "youtube.com",
     "Valorant": "99.83.136.104"
 }
 DATA_FILE = "data.json"
 
-import platform # Add this to your imports at the top
-
 def get_ping(host):
     try:
-        # Detect OS: 'Windows' or something else (Linux/Mac)
         param = '-n' if platform.system().lower() == 'windows' else '-c'
         
         output = subprocess.check_output(['ping', param, '1', '-w' if platform.system().lower() == 'windows' else '-W', '2', host], universal_newlines=True)
         
         for line in output.split('\n'):
             if 'time=' in line or 'time<' in line: # Windows sometimes says time<1ms
-                # Extract the time in milliseconds
                 time_str = line.split('time=')[1].split('ms')[0] if 'time=' in line else line.split('time<')[1].split('ms')[0]
                 return float(time_str.strip())
     except Exception:
@@ -46,7 +43,7 @@ def track_and_push():
         entry[name] = get_ping(host)
 
     data.append(entry)
-    data = data[-288:] # Keep the last 48 hours (if running every 10 mins)
+    data = data[-1440:] # Keep the last 48 hours (if running every 10 mins)
 
     with open(DATA_FILE, 'w') as f:
         json.dump(data, f, indent=2)
@@ -64,4 +61,4 @@ if __name__ == "__main__":
     print("Starting local ping tracker... Press Ctrl+C to stop.")
     while True:
         track_and_push()
-        time.sleep(600) # Waits 600 seconds (10 minutes) before running again
+        time.sleep(300)
