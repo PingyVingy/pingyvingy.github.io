@@ -28,5 +28,23 @@
     "Google": 548.0,
     "YouTube": 508.0,
     "Valorant": 552.0
+  },
+  {
+    "timestamp": "2026-03-01T14:39:05.910371Z",
+    "Google": 418.0,
+    "YouTube": null,
+    "Valorant": 264.0
+  },
+  {
+    "timestamp": "2026-03-01T14:39:13.598345Z",
+    "Google": 408.0,
+    "YouTube": null,
+    "Valorant": null
+  },
+  {
+    "timestamp": "2026-03-01T14:42:49.610110Z",
+    "Google": null,
+    "YouTube": null,
+    "Valorant": null
   }
 ]
