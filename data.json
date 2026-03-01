@@ -1,86 +1,8 @@
 [
   {
-    "timestamp": "2026-02-28T20:38:38.076315Z",
-    "Google": 1.85,
-    "YouTube": 2.89,
-    "Valorant": 38.0
-  },
-  {
-    "timestamp": "2026-02-28T20:39:42.452258Z",
-    "Google": 1.82,
-    "YouTube": 3.0,
-    "Valorant": 39.4
-  },
-  {
-    "timestamp": "2026-02-28T20:40:01.561081Z",
-    "Google": 1.82,
-    "YouTube": 3.64,
-    "Valorant": 38.0
-  },
-  {
-    "timestamp": "2026-02-28T20:42:29.589189Z",
-    "Google": 2.7,
-    "YouTube": 6.33,
-    "Valorant": 37.9
-  },
-  {
-    "timestamp": "2026-03-01T14:12:14.577100Z",
-    "Google": 548.0,
-    "YouTube": 508.0,
-    "Valorant": 552.0
-  },
-  {
-    "timestamp": "2026-03-01T14:39:05.910371Z",
-    "Google": 418.0,
+    "timestamp": "2026-03-01T15:30:42.005404Z",
+    "Google": 212.0,
     "YouTube": null,
-    "Valorant": 264.0
-  },
-  {
-    "timestamp": "2026-03-01T14:39:13.598345Z",
-    "Google": 408.0,
-    "YouTube": null,
-    "Valorant": null
-  },
-  {
-    "timestamp": "2026-03-01T14:42:49.610110Z",
-    "Google": null,
-    "YouTube": null,
-    "Valorant": null
-  },
-  {
-    "timestamp": "2026-03-01T15:16:21.995365Z",
-    "Google": 227.0,
-    "YouTube": null,
-    "Valorant": 253.0
-  },
-  {
-    "timestamp": "2026-03-01T15:17:04.706180Z",
-    "Google": 301.0,
-    "YouTube": null,
-    "Valorant": 305.0
-  },
-  {
-    "timestamp": "2026-03-01T15:25:15.067410Z",
-    "Google": 182.0,
-    "YouTube": 179.0,
-    "Valorant": null
-  },
-  {
-    "timestamp": "2026-03-01T15:26:11.558106Z",
-    "Google": 272.0,
-    "YouTube": null,
-    "Valorant": 194.0
-  },
-  {
-    "timestamp": "2026-03-01T15:27:55.185897Z",
-    "Google": null,
-    "YouTube": null,
-    "Valorant": null
-  },
-  {
-    "timestamp": "2026-03-01T15:29:09.665074Z",
-    "Google": 49.0,
-    "YouTube": 57.0,
-    "Valorant": 103.0
+    "Valorant": 188.0
   }
 ]
