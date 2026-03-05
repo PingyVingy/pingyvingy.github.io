@@ -1726,5 +1726,11 @@
     "Google": 333.0,
     "YouTube": null,
     "Valorant": 326.0
+  },
+  {
+    "timestamp": "2026-03-05T19:14:41.634126Z",
+    "Google": null,
+    "YouTube": 185.0,
+    "Valorant": 200.0
   }
 ]
