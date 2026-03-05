@@ -1102,5 +1102,11 @@
     "Google": 7.0,
     "YouTube": 9.0,
     "Valorant": 27.0
+  },
+  {
+    "timestamp": "2026-03-05T10:28:45.786910Z",
+    "Google": 123.0,
+    "YouTube": 139.0,
+    "Valorant": null
   }
 ]
