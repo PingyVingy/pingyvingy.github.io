@@ -3208,5 +3208,11 @@
     "Google": null,
     "YouTube": null,
     "Valorant": null
+  },
+  {
+    "timestamp": "2026-04-20T21:31:48.775385Z",
+    "Google": 1.0,
+    "YouTube": 2.0,
+    "Valorant": 39.0
   }
 ]
